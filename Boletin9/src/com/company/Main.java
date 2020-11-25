@@ -1,12 +1,11 @@
 package com.company;
 
 import javax.swing.*;
-import java.io.Console;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner datos = new Scanner(System.in);
         //Ejercicio1------------
 	/*Boletin9_1 Ej1 = new Boletin9_1();
