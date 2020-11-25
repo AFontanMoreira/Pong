@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Main {
@@ -33,6 +34,28 @@ public class Main {
         System.out.println("El area es= "+Ej3.areaRectangulo(base,altura));
         */
         //Ejercicio4----------
+        /*
+        Boletin9_4 Ej4 =new Boletin9_4();
+        int numero;
+        numero=Integer.parseInt(JOptionPane.showInputDialog("Dame un numero"));
+        Ej4.Ej4(numero);
+         */
+        //Ejercicio5----------
+        Boletin9_5 Ej5 = new Boletin9_5();
+        int sueldo,trabajadores=0,bajo=0;
+        float porcentaje;
+        System.out.println("Dame un sueldo");
+        sueldo= datos.nextInt();
+        while (sueldo != 0){
+            trabajadores++;
+            if (Ej5.Ej5(sueldo)==false){
+                bajo++;
+            }
+            System.out.println("Dame otro sueldo (o para salir)");
+            sueldo= datos.nextInt();
 
+        }
+        porcentaje=bajo*100/trabajadores;
+        System.out.println("Un "+porcentaje+"% de trabajadores tienen un sueldo mas bajo de 1000.");
     }
 }
