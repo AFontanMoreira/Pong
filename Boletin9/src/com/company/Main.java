@@ -34,13 +34,18 @@ public class Main {
         System.out.println("El area es= "+Ej3.areaRectangulo(base,altura));
         */
         //Ejercicio4----------
-        /*
+
         Boletin9_4 Ej4 =new Boletin9_4();
         int numero;
         numero=Integer.parseInt(JOptionPane.showInputDialog("Dame un numero"));
-        Ej4.Ej4(numero);
-         */
+        while (numero != 0){
+            Ej4.Ej4(numero);
+            numero=Integer.parseInt(JOptionPane.showInputDialog("Dame otro numero (0 para salir)"));
+        }
+
+
         //Ejercicio5----------
+        /*
         Boletin9_5 Ej5 = new Boletin9_5();
         int sueldo,trabajadores=0,bajo=0;
         float porcentaje;
@@ -57,5 +62,7 @@ public class Main {
         }
         porcentaje=bajo*100/trabajadores;
         System.out.println("Un "+porcentaje+"% de trabajadores tienen un sueldo mas bajo de 1000.");
+        */
+
     }
 }
