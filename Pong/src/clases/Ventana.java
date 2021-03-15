@@ -3,7 +3,7 @@ package clases;
 import javax.swing.*;
 
 public class Ventana extends JFrame {
-    private final int ancho=800,alto=500;
+    static final int ancho=800,alto=500;
     private TableroJuego lamina;
     private Hilo hilo;
 

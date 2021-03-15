@@ -9,10 +9,10 @@ import java.util.logging.Logger;
 public class TableroJuego extends JPanel {
     //Creamos la pelota con las coordenadas de inicio
     TableroJuego lamina;
-    Pelota pelota = new Pelota(0,0);
+    Pelota pelota = new Pelota(Ventana.ancho/2-10,Ventana.alto/2-10);
 
     Raqueta r1 = new Raqueta(10,200);
-    Raqueta r2 = new Raqueta(794-10-10-Raqueta.ANCHO,200);
+    Raqueta r2 = new Raqueta(794-10-Raqueta.ANCHO,200);
 
     public TableroJuego(){
     //Ponemos color de fondo
@@ -27,6 +27,8 @@ public class TableroJuego extends JPanel {
         g2.setColor(Color.WHITE);
         dibujar(g2);
         actualizar();
+        System.out.println("izquierda"+Pelota.contadorIzquierda);
+
 
     }
 
@@ -34,11 +36,16 @@ public class TableroJuego extends JPanel {
         g.fill(pelota.getPelota());
         g.fill(r1.getRaqueta());
         g.fill(r2.getRaqueta());
+        g.drawLine(Ventana.ancho/2-10, 0, Ventana.ancho/2-10,Ventana.alto );
+
     }
     public  void actualizar(){
-        pelota.mover(getBounds(),colision(r1.getRaqueta()),colision(r2.getRaqueta()));
-        r1.moverR1(getBounds());
-        r2.moverR2(getBounds());
+
+            pelota.mover(getBounds(),colision(r1.getRaqueta()),colision(r2.getRaqueta()));
+            r1.moverR1(getBounds());
+            r2.moverR2(getBounds());
+
+
     }
     public void iterarJuego(){
         while (true){
